@@ -1,0 +1,25 @@
+In JavaScript, copying of data from one variable to another is done in 2 ways.
+
+Copy by Value : If we try to do copy operation between 2 variables using ‘=’ operator( a = b ), ‘a’ gets the value of ‘b’.
+
+Copy by Reference : If we try to do copy operation between 2 variables using ‘=’ operator( a = b ), ‘a’ gets the address of ‘b’ .i.e., both a and b will be referring to same address in memory. If the value of ‘a’ changes then value of ‘b’ also changes.
+
+By default for Primitive datatypes(Number, String, Boolean) copying is done through Copy by Value, whereas for composite datatypes(arrays, Objects) copying is done through Copy by Reference.
+
+There are ways to do copying for composite datatypes through Copy by Value.
+
+Using spread(…) operator :
+var arr1 = [10, 20, 30];
+var arr2 = [];
+arr2 = […arr1];
+console.log(arr2) ;
+Output : [10, 20, 30]
+
+Using Object.assign() method :
+var arr1 = [10, 20, 30];
+var arr2 = [];
+Object.assign(arr2 , arr1);
+console.log(arr2);
+Output : [10, 20, 30]
+
+We can even use some iterators to copy composite datatypes through Copy by Value.
