@@ -1,0 +1,12 @@
+Http2 introduces many features to overcome the drawbacks of Http1.1.
+
+HPACK — It is an advanced compression method in which Header data is separated from request data and it can be zipped. It eliminates redundant data in http header packets which reduces http request size and resulting in faster loading.
+
+HTTP2 is secure as it is mandatory to use https.
+
+PUSH — This feature enables servers to send inter dependent resources in advance along with the http response. This feature is not available in http1.1. With this feature the count of requests will get reduced and page loads faster.
+
+Http2 offers developers to decide which page resources should load first. With this feature servers can send small size resources(text files) first
+followed by large size resources(images). This allows the user to load essential data for the client first and faster.
+
+Http2 sends requests in the form of streams over the TCP layer. Each stream of data is referred to as a request. It results in fast data transfer.
