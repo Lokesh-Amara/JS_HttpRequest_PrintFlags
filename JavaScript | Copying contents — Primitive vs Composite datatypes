@@ -1,0 +1,18 @@
+In JavaScript datatypes are classified into 2 types.
+
+1) Primitives — Number, String, Boolean, Undefined.
+2) Composite— Objects, Arrays, Functions.
+
+By default, if primitive datatypes are assigned to some data then they refer to the data. Whereas if Non-primitive(Composite) datatypes are assigned to some data they refer to the address where this data is stored in memory.
+Ex:
+let x = 2;
+let y = a;
+
+Since x is a primitive datatype, x refers to data .i.e., (x -> 2). When y gets initialized with x, the data ‘2’ gets copied into new memory and y refers to this new data( y -> 2). If x gets updated then y won’t gets updated since both x and y refers to data in different memory locations. This type of Copying is called as ‘Copy by Value’.
+
+let array1 = [1, 2, 3];
+let array2 = array1;
+
+Since array1 is a composite datatype, array1 refers to address(ex: 01x1) where this data [1, 2, 3] is stored in memory. When array2 gets initialized with array1, array2 gets referred to the same address as array1. So if array1 gets updated then array2 also gets updated since both are referring to same memory location. This type of Copying is called as ‘Copy by Reference’.
+
+There are ways to do Copy by Value for a composite datatype. They include spread operator ‘(…)’, ObjectAssign() method or using some iterators.
