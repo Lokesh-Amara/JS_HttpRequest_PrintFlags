@@ -1,0 +1,20 @@
+Window : The window object represents an open window in a browser. An object of window is created automatically by the browser when a new window is open. The window object is the top-level object of the object hierarchy where all the global objects, functions and variables comes under it. Global variables are properties of the window object and Global functions are methods of the window object.
+
+Using the properties of the window object we can retrieve the information about current window and using methods we can perform certain tasks on it.
+In a multi-tab environment, each tab has a window object which has its own properties and methods. But there are some properties that apply to all window objects like ‘resizeTo’ method.
+
+An advantage of window is that we can directly type something like ‘alert()’ instead of ‘window.alert()’. The browser can understand it. It’s because window is the primary object of a browser and we don’t have to declare it before methods.
+
+Document : The document object represents your web page. It is the root node of the HTML document. It has various nodes and methods which can be used to manipulate the DOM nodes and listen for events on these nodes. We can access this document property by using document keyword or by using window.document. If we want to access any node in html page, we have to start accessing the document object.
+Ex:
+document.getElementById(id)
+document.getElementsByTagName(name)
+
+By using document object we can add dynamic content to the web page.
+The way a document content is accessed and modified is called the Document Object Model, or DOM. The DOM represents a document as a tree of nodes. It provides various methods that allows us to add, remove, and modify parts of the document effectively. In DOM tree, the document is the root node. The root node has one child which is the <html> element.
+
+Screen : The Screen object contains information about the user’s screen. In Object hierarchy, the screen object comes under window object. It can be used to display screen width, height, colorDepth, etc.
+Ex:
+screen.width
+screen.height
+screen.availWidth
