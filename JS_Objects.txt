@@ -1,0 +1,91 @@
+Objects in JavaScript are used to store key-value pair collections. Each key-value pair is called as property of an object. A key(property name) is a string or a number whereas value can be of any datatype. An Object can be a property of another Object. In JavaScript, an array is an Object with keys as positive integers starting with 0.
+Ex :
+var myObj = {
+	name : ‘lokesh’,
+	age : 24,
+	gender : ‘male’
+}
+
+This is a simple JavaScript Object. Here myObj is name of the Object. A key-value pair(name : lokesh) is a property of this Object. Each property is separated by using a comma(,).
+
+we can refer to objects and their properties using 2 ways.
+1) Dot notation : ( objectName.propertyName )
+Ex: var name = myObj.name;
+
+2) Using ‘[]’ : ( objectName[“propertyName”] )
+Ex: var name = myObj[‘name’];
+
+An Object can be created in multiple ways.
+Object Literal :
+
+var myObj = {
+	name : ‘lokesh’,
+	age : 24,
+	gender : ‘male’,
+	weight : ‘72Kgs’
+}
+
+The example above shows an object created using Object Literal.
+
+Using Constructor :
+The another way to create an Object is by using new keyword.
+
+function Vehicle(type, brand, year) {
+	this.type = type;
+	this.brand = brand;
+	this.year = year;
+}
+
+The function above is called a constructor and is used to create an Object.
+
+	var myCar = new Vehicle(“car”, “Benz”, 2019);
+	
+The above statement creates an object named ‘myCar’.
+
+myCar = {
+	type : ‘car’,
+	brand : ‘Benz’,
+	year : 2019
+};
+
+We can have an Object as a property in another Object.
+var obj1 = {
+	name : ‘lokesh’,
+	age : 24,
+	gender : ‘male’,
+	job : {
+		company : ‘abc’,
+		location : ‘hyd’,
+		position : ‘SA’
+	}
+}
+
+Here the Object 'job' is a property to obj1.
+
+We can include a function as a property in object.
+var myObj = {
+	fname : ‘lokesh’,
+	lname : ‘abc’,
+	fullname : function(){
+		console.log(this.fname+” “+this.lname);
+	}
+}
+
+Functions in objects are called as methods. In the above example, fullname is a method to myObj.
+Object methods can be executed using dot notation.
+
+myObj.fullname();
+
+By using the dot operator we can add new properties to objects.
+
+myObj.age = 24;
+
+we can delete a property in an Object using delete keyword.
+
+delete myObj.lname;
+
+we can check to see if a property of an object exists. It returns the result (true or false) to the variable.
+
+var propertyExists = “lname” in myObj;
+
+There are various pre-defined methods to work with Objects in JavaScript.
